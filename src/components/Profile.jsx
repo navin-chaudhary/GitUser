@@ -26,8 +26,8 @@ const Profile = ({ profile }) => {
       {profile && (
         <div className="w-full h-full  ">
           <div class="flex items-center w-full h-[50vh]  justify-center">
-            <div className="flex flex-col sm:flex-row gap-2 lg:gap-14 w-[600px ] mt-16 justify-center items-center">
-              <div class="w-40 h-40 sm:w-25 sm:h-25 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-blue-500 ">
+            <div className="flex flex-col sm:flex-row gap-2 lg:gap-14 w-[600px ] mt-16 justify-center ">
+              <div class="w-36 h-36  sm:w-25 sm:h-25 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-blue-500 ">
                 <img
                   src={profile.avatar_url}
                   alt={`${profile.login}'s avatar`}
@@ -78,7 +78,7 @@ const Profile = ({ profile }) => {
               </div>
             </div>
           </div>
-          <div className="mt-12 pb-4">
+          <div className="mt-16 sm:mt-9 pb-4">
             <div className="w-full flex justify-center text-bold text-2xl">
               <h2>Repositories</h2>
             </div>
