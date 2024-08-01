@@ -25,7 +25,7 @@ const Profile = ({ profile }) => {
     <>
       {profile && (
         <div className="w-full h-full  ">
-          <div class="flex items-center w-full h-[50vh]  justify-center">
+          <div class="flex items-center w-full h-[50vh]  lg:justify-center">
             <div className="flex flex-col sm:flex-row gap-2 lg:gap-14 w-[600px ] mt-20 justify-center md:items-center lg:items-center">
               <div class="w-32 ml-1 h-32  sm:w-25 sm:h-25 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-blue-500 ">
                 <img
