@@ -82,7 +82,7 @@ const Profile = ({ profile }) => {
             <div className="w-full flex justify-center text-bold text-2xl">
               <h2>Repositories</h2>
             </div>
-            <div className="repo-list mt-6 ">
+            <div className="repo-list grid md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-center sm:gap-4 gap-6 gap-x-0 mt-6 ">
               {repos.map((repo, index) => (
                 <div key={index} className="repo-card  w-80 lg:w-96">
                   <img src="folder.png" alt="" className="repo-icon" />

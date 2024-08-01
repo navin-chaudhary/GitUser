@@ -36,7 +36,7 @@ function Hero() {
         <Profile profile={profile} />
       ) : (
         <form onSubmit={handlesubmit}>
-          <div className="containers bg-white h-12  rounded-lg pl-3">
+          <div className="containers bg-white h-12 rounded-lg pl-3">
             <button type="submit">
               <img src={"search.png"} alt="" className="h-8  opacity-[0.5]" />
             </button>
