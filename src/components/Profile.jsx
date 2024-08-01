@@ -26,7 +26,7 @@ const Profile = ({ profile }) => {
       {profile && (
         <div className="w-full h-full  ">
           <div class="flex items-center w-full h-[50vh]  justify-center">
-            <div className="flex flex-col sm:flex-row gap-2 lg:gap-14 w-[600px ] mt-16 justify-center ">
+            <div className="flex flex-col sm:flex-row gap-2 lg:gap-14 w-[600px ] mt-20 justify-center ">
               <div class="w-36 h-36  sm:w-25 sm:h-25 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-blue-500 ">
                 <img
                   src={profile.avatar_url}
@@ -51,7 +51,7 @@ const Profile = ({ profile }) => {
                   </span>
                 </div>
                 <p class="text-gray-500 mt-2">
-                  Joined on :{profile.created_at}
+                  Joined on :{new Date(profile.created_at).toLocaleDateString()}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <div className="flex cursor-pointer">
