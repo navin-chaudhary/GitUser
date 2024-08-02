@@ -1,71 +1,99 @@
-import { useState } from "react";
-import React from 'react';
+import React, { useState } from "react";
+// import logo from "../assets/Logo.svg";
 import { Link } from "react-router-dom";
+import './Spiner'
 
-function Navbar() {
-  const [showMenu, setShowMenu] = useState(false);
+const Navbar = () => {
+  const [showmenu, setshowmenu] = useState(false);
 
   return (
-    <nav className="h-[10vh] mt-4 lg:mb-4 bg-[rgb(238, 237, 237);]">
-      <div className="w-full">
-        <div className="container w-[90%] mx-auto px-4 flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold text-gray-800 flex items-center">
-            <img src="logo.svg" alt="Logo" className="h-14 mr-2" />
-            
-          </Link>
-          <div className="md:hidden">
-            <button
-              onClick={() => setShowMenu(!showMenu)}
-              className="text-gray-800 focus:outline-none inline absolute right-0"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+    <>
+      <header>
+        <nav>
+          <div className="container">
+            <Link to="/">
+              <div className="logo">
+                <img src='logo.svg' alt="" />
+              </div>
+            </Link>
+           <div className="pcmenu">
+           <ul>
+              <Link to="/">
+                <li>Home</li>
+              </Link>
+              <Link to="/">
+                <li>About</li>
+              </Link>
+              <Link to="/">
+                <li>Contact</li>
+              </Link>
+            </ul>
+           </div>
+
+            <div className="mobilemenu">
+              <ul className={showmenu ? "visible_true" : "visible_false"}>
+                <div
+                  onClick={() => {
+                    setshowmenu(!showmenu);
+                  }}
+                  className="close"
+                >
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41L17.59 5Z"
+                      fill="grey"
+                    />
+                  </svg>
+                </div>
+                <Link to="/">
+                  <li>Home</li>
+                </Link>
+                <Link to="/">
+                  <li>About</li>
+                </Link>
+                <Link to="/">
+                  <li>Contact</li>
+                </Link>
+              </ul>
+              <div
+                onClick={() => {
+                  setshowmenu(!showmenu);
+                }}
+                className="menu"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  
-                  d={showMenu ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-                ></path>
-              </svg>
-            </button>
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.05 11H3.95C3.42533 11 3 11.4253 3 11.95V12.05C3 12.5747 3.42533 13 3.95 13H20.05C20.5747 13 21 12.5747 21 12.05V11.95C21 11.4253 20.5747 11 20.05 11Z"
+                    fill="#666666"
+                  />
+                  <path
+                    d="M20.05 16H3.95C3.42533 16 3 16.4253 3 16.95V17.05C3 17.5747 3.42533 18 3.95 18H20.05C20.5747 18 21 17.5747 21 17.05V16.95C21 16.4253 20.5747 16 20.05 16Z"
+                    fill="#666666"
+                  />
+                  <path
+                    d="M20.05 6H3.95C3.42533 6 3 6.42533 3 6.95V7.05C3 7.57467 3.42533 8 3.95 8H20.05C20.5747 8 21 7.57467 21 7.05V6.95C21 6.42533 20.5747 6 20.05 6Z"
+                    fill="#666666"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
-          <div
-            className={`${
-              showMenu ? "block" : "hidden"
-            } w-full mr-3 self-end md:flex md:items-center w-auto space-y-2 md:space-y-0 md:space-x-8 font-mono sm:relative lg:relative absolute  right-0 lg:top-0 md:top-0  top-16`}
-          >
-            <Link
-              to="/"
-              activeClassName="text-blue-900"
-              className="block md:inline-block hover:text-blue-500 text-1xl md:text-2xl"
-            >
-              Home
-            </Link>
-            <Link
-              to="/"
-              activeClassName="text-blue-500"
-              className="block md:inline-block hover:text-blue-500 text-1xl md:text-2xl"
-            >
-              About
-            </Link>
-            <Link
-              to="/"
-              activeClassName="text-blue-500"
-              className="block md:inline-block hover:text-blue-500 text-1xl md:text-2xl"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      </div>
-    </nav>
+        </nav>
+      </header>
+    </>
   );
-}
+};
 
 export default Navbar;
