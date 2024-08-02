@@ -85,7 +85,7 @@
   header nav .container ul {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 25px;
     position: relative;
   }
   header nav .container ul .close {
@@ -95,6 +95,7 @@
     top: 15px;
   }
   header nav .container ul li {
+    margin-right: 10px;
     font-size: 18px;
     font-family: Satoshi-Medium;
   }
@@ -108,51 +109,7 @@
     color: blueviolet;
   }
   @media (max-width: 767px) {
-    .main .flx .userdata h2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-    .main .flx .userdata p,
-  .main .flx .userdata p span {
-      font-size: 14px;
-    }
-    .main .flx .userdata .otherinfo {
-      gap: 15px;
-    }
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero form {
-      padding: 0 10px;
-      width: 90%;
-      gap: 0;
-    }
-    .hero form input {
-      height: 55px;
-    }
-    .hero form button {
-      display: block;
-    }
-    .hero form img {
-      display: none;
-    }
-    input::-moz-placeholder {
-      font-size: 14px;
-    }
-    input:-ms-input-placeholder {
-      font-size: 14px;
-    }
-    input::placeholder {
-      font-size: 14px;
-    }
-    .hero form input {
-      width: 100%;
-      font-size: 16px;
-    }
+   
     .pcmenu {
       display: none;
     }
@@ -164,7 +121,7 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      gap: 50px;
+      /* gap: 50px; */
       position: absolute;
       height: -webkit-max-content;
       height: -moz-max-content;
@@ -176,8 +133,8 @@
       right: 0;
       top: -10pz;
       z-index: 10000000;
-      padding: 0 100px;
-      padding-top: 70px;
+      padding: 0 50px;
+      padding-top: 54px;
       padding-bottom: 30px;
       background: rgba(255, 255, 255, 0.8);
       -webkit-backdrop-filter: blur(20px);
@@ -188,4 +145,4 @@
     header nav .container ul .close {
       display: block;
     }
-  }/*# sourceMappingURL=App.css.map */
+  }
