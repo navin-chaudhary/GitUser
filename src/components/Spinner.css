@@ -95,7 +95,8 @@
   }
   header nav .container ul li {
     margin-right: 10px;
-    font-size: 18px;
+    font-size: 25px;
+    font-weight: bolder;
     font-family: Satoshi-Medium;
   }
   header nav .container ul a {

@@ -18,8 +18,8 @@ const Navbar = () => {
             </Link>
            <div className="pcmenu">
            <ul>
-              <Link to="/">
-                <li>Home</li>
+              <Link to="/" >
+                <li className="text-6xl ">Home</li>
               </Link>
               <Link to="/">
                 <li>About</li>
@@ -51,7 +51,7 @@ const Navbar = () => {
                     />
                   </svg>
                 </div>
-                <Link to="/">
+                <Link to="/" >
                   <li>Home</li>
                 </Link>
                 <Link to="/">
